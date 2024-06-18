@@ -1,0 +1,103 @@
+
+
+.container-width{
+    background-size: cover;
+}
+
+.logo-size{
+    height: 48px;
+    width: 180px;
+    vertical-align: middle;
+    cursor: pointer;
+
+}
+
+.login-caption{
+    font-size: 90px;
+    font-family: 'Source Sans 3';
+   
+}
+
+.custom-link{
+    text-decoration: none;
+    color: #737373;
+    font-size: 13px;
+}
+
+.custom-link:hover{
+    text-decoration: underline;
+    
+}
+
+.ms-6{
+    margin-left: 280px;
+}
+
+.form-container{
+    width: 900px;
+
+}
+
+input.largerCheckbox { 
+    width: 19px; 
+    height: 19px; 
+    
+}
+
+
+.remember-me {
+    display: flex;
+    align-items: center;
+  }
+  
+  .remember-me label {
+    margin-left: 10px; /* Adjust this value to control the space between the checkbox and label */
+  }
+  
+  
+.navbar-line{
+    border-bottom: 1px solid #e6e6e6;
+    height: 90px;
+}
+
+.Sign-In{
+    color: #333;
+    font-size: 19px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.Sign-In:hover{
+    text-decoration: underline;
+   
+}
+
+
+.checkmark-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.box-style{
+    width: 120px;
+    height: 110px;  
+    padding-bottom: 40px;
+    padding-top: 40px;
+     background-color: #e50914;
+     opacity: .6;
+     color: #fff;
+     font-size: 17px;
+     font-weight: 500;
+     text-align:center;
+     box-sizing: border-box;
+     float: right;
+}
+
+.price-list{
+    color: #737373;
+    font-weight: 500;
+}
+
+

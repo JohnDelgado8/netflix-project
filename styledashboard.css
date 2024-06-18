@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@800&display=swap');
+
+
+/* Background Start */
+.container-width{
+    background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)), url(/assets/Bg.jpg);
+   
+    background-size: cover;
+}
+
+.logo-size{
+    height: 45px;
+    width: 140px;
+    vertical-align: middle;
+    fill: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+

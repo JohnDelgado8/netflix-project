@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@800&display=swap');
+
+
+/* Background Start */
+.container-width{
+    background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)), url(./assets/Bg.jpg);
+   
+    background-size: cover;
+}
+
+.logo-size{
+    height: 45px;
+    width: 167px;
+    vertical-align: middle;
+    fill: red;
+}
+
+/* Background End */
+
+
+/* Form Start */
+.form-container{
+   
+    background-color: rgba(0, 0, 0, .75);
+   
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+    padding-right: 60px;
+
+}
+
+.login-caption{
+    font-size: 30px;
+    text-align: start;
+    font-weight: 500;
+    color: #fff;
+  
+}
+
+.form-control{
+    background-color: #333;
+    border-color: #333;
+    color: white;
+    height: 45px;
+
+}
+
+.submit-btn{
+    width: 400px;
+    background: #e50914;
+    height: 45px;
+    color: #fff;
+    font-weight: 500;
+}
+
+
+
+.icons{
+    color: black;
+}
+
+.bg-eye{
+    background-color: #333;
+}
+
+
+
+/* CSS for the placeholder text of the password input */
+
+
+input[name="pword"]::placeholder {
+    color: #8c8c8c; /* Change the color to your preferred choice */
+    font-size: 14.5px;
+}
+
+
+input[name="email"]::placeholder {
+    color: #8c8c8c; /* Change the color to your preferred choice */
+    font-size: 14.5px;
+}
+
+
+
+.custom-text {
+    color: #b3b3b3; /* Change 'red' to the desired color */
+    font-size: 13px;
+    font-weight: 400;
+   
+}
+
+.custom-text:hover {
+    text-decoration: underline;
+   
+}
+
+.mt-6{
+    margin-top: 60px;
+}
+
+.new-user{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.new-user-animate{
+    color: #fff; 
+    cursor: pointer; 
+    font-size: 15px;
+}
+
+.find-out{
+    color: #0071eb;
+}
+
+.find-out:hover{
+    text-decoration: underline;
+}
+
+.new-user-animate:hover{
+    text-decoration: underline;
+}
+.google{
+    color: #8c8c8c;
+    font-size: 13px;
+
+}
+
+
+/* Form Ends */
+
+
+.custom-link{
+    text-decoration: none;
+    color: #737373;
+    font-size: 13px;
+}
+
+.custom-link:hover{
+    text-decoration: underline;
+    
+}
+
+

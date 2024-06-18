@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+    <title>Netflix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="plan-style.css">
+
+</head>
+
+<body>
+    <div id="loading-screen"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); display: flex; justify-content: center; align-items: center; z-index: 999;">
+        <div class="spinner-border text-danger" role="status">
+
+        </div>
+    </div>
+    <div class="container-fluid container-width" style="padding: 0; height: 1235px;">
+        <nav class="navbar navbar-line px-4">
+
+
+            <img src="./assets/Logo.svg" class="logo-size mt-2 px-2">
+            <span class="Sign-In px-2" onclick="window.location.href='login.html';">Sign In</span>
+
+
+        </nav>
+        <div class="container-fluid">
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <card class="form-container mt-4">
+                            <span style="font-size: 13px; color: #333; font-family: sans-serif;">STEP <b>1</b> OF
+                                <b>2</b></span>
+                            <h1 style="font-size: 32px; font-weight: 500;">Choose the plan that's right for you</h1>
+                            <div class="checkmark-group mb-3 d-flex flex-wrap justify-content-between">
+                                <div class="checkmark-item"
+                                    style="margin-right: 10px; margin-bottom: -10px; display: flex; align-items: center;">
+                                    <i class="bi bi-check2 me-2" style="font-size: 30px; color: #e50914;"></i>
+                                    <span style="font-size: 18px;">Watch all you want. Ad-free.</span>
+                                </div>
+                                <div class="checkmark-item"
+                                    style="margin-right: 10px; margin-bottom: -10px; display: flex; align-items: center;">
+                                    <i class="bi bi-check2 me-2" style="font-size: 30px; color: #e50914;"></i>
+                                    <span style="font-size: 18px;">Recommendations just for you.</span>
+                                </div>
+                                <div class="checkmark-item"
+                                    style="margin-right: 10px; margin-bottom: 10px; display: flex; align-items: center;">
+                                    <i class="bi bi-check2 me-2" style="font-size: 30px; color: #e50914;"></i>
+                                    <span style="font-size: 18px;">Change or cancel your plan anytime.</span>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-bottom: 35px;">
+                                <div class="col-4">
+                                </div>
+                                <div class="col-2">
+                                    <div class="box-style rounded" onclick="changeColor(this, 'mobile')">Mobile</div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="box-style rounded" onclick="changeColor(this, 'basic')">Basic</div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="box-style rounded" onclick="changeColor(this, 'standard')">Standard
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="box-style rounded" onclick="changeColor(this, 'premium')">Premium</div>
+                                </div>
+                            </div>
+
+                            <div class="row pb-3" style="border-bottom: 1px solid #ccc;">
+                                <div class="col-4">
+                                    <div
+                                        style="color: #333; font-weight: 400; font-size: 16px; font-family: sans-serif;">
+                                        Monthly Price
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="monthly-price-mobile" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 16px;">
+                                        ₱149
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="monthly-price-basic" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 16px;">
+                                        ₱249
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="monthly-price-standard" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 16px;">
+                                        ₱399
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="monthly-price-premium" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 16px;">
+                                        ₱549
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row py-3" style="border-bottom: 1px solid #ccc; ">
+                                <div class="col-4">
+                                    <div
+                                        style="color: #333; font-weight: 400; font-size: 16px; font-family: sans-serif;">
+                                        Video quality</div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="video-quality-mobile" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 16px;">
+                                        Good</div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="video-quality-basic" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 16px;">
+                                        Good</div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="video-quality-standard" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 16px;">
+                                        Better</div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="video-quality-premium" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 16px;">
+                                        Best</div>
+                                </div>
+
+                            </div>
+
+                            <div class="row py-3" style="border-bottom: 1px solid #ccc; ">
+                                <div class="col-4">
+                                    <div
+                                        style="color: #333; font-weight: 400; font-size: 16px; font-family: sans-serif;">
+                                        Resolution</div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="resolution-mobile" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 16px;">
+                                        480p</div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="resolution-basic" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 16px;">
+                                        720p</div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="resolution-standard" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 16px;">
+                                        1080p</div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="resolution-premium" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 16px;">
+                                        4K+HDR</div>
+                                </div>
+
+                            </div>
+                            <div class="row pt-2">
+                                <div class="col-4">
+                                    <div
+                                        style="color: #333; font-weight: 400; font-size: 16px; font-family: sans-serif;">
+                                        Devices you can user to watch</div>
+                                </div>
+                                <div class="col-2">
+
+                                    <div id="devices-mobile" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 26px; ">
+                                        <i class="bi bi-phone" style=""></i>
+                                    </div>
+                                    <div id="phone-mobile" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 12px; ">Phone
+                                    </div>
+
+                                </div>
+                                <div class="col-2">
+                                    <div id="devices-basic" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 26px; ">
+                                        <i class="bi bi-phone" style=""></i>
+                                    </div>
+                                    <div id="phone-basic" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 12px; ">Phone
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="devices-standard" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 26px; ">
+                                        <i class="bi bi-phone" style=""></i>
+                                    </div>
+                                    <div id="phone-standard" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 12px; ">Phone
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="devices-premium" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 26px; ">
+                                        <i class="bi bi-phone" style=""></i>
+                                    </div>
+                                    <div id="phone-premium" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 12px; ">Phone
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row pt-1">
+                                <div class="col-4">
+
+                                </div>
+                                <div class="col-2">
+
+                                    <div id="devices2-mobile" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 26px; ">
+                                        <i class="bi bi-tablet-landscape"></i>
+                                    </div>
+                                    <div id="tablet-mobile" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 12px; ">Tablet
+                                    </div>
+
+                                </div>
+                                <div class="col-2">
+                                    <div id="devices2-basic" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 26px; ">
+                                        <i class="bi bi-tablet-landscape"></i>
+                                    </div>
+                                    <div id="tablet-basic" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 12px; ">Tablet
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="devices2-standard" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 26px; ">
+                                        <i class="bi bi-tablet-landscape"></i>
+                                    </div>
+                                    <div id="tablet-standard" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 12px; ">Tablet
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="devices2-premium" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 26px; ">
+                                        <i class="bi bi-tablet-landscape"></i>
+                                    </div>
+                                    <div id="tablet-premium" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 12px; ">Tablet
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row pt-1">
+                                <div class="col-4">
+
+                                </div>
+                                <div class="col-2">
+                                    <div id="devices3-mobile" class="col-2">
+                                    </div>
+
+                                    <div id="computer-mobile">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="devices3-basic" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 26px; ">
+                                        <i class="bi bi-laptop"></i>
+                                    </div>
+                                    <div id="computer-basic" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 12px; ">Computer
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="devices3-standard" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 26px; ">
+                                        <i class="bi bi-laptop"></i>
+                                    </div>
+                                    <div id="computer-standard" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 12px; ">Computer
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="devices3-premium" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 26px; ">
+                                        <i class="bi bi-laptop"></i>
+                                    </div>
+                                    <div id="computer-premium" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 12px; ">Computer
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row pb-1 mb-3">
+                                <div class=" col-4">
+
+                                </div>
+                                <div class="col-2">
+
+                                    <div id="devices4-mobile" class="col-2">
+                                    </div>
+
+                                    <div id="television-mobile">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="devices4-basic" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 26px; ">
+                                        <i class="bi bi-tv"></i>
+                                    </div>
+                                    <div id="television-basic" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 12px; ">TV
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="devices4-standard" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 26px; ">
+                                        <i class="bi bi-tv"></i>
+                                    </div>
+                                    <div id="television-standard" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 12px; ">TV
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div id="devices4-premium" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 26px; ">
+                                        <i class="bi bi-tv"></i>
+                                    </div>
+                                    <div id="television-premium" class="text-center"
+                                        style="color: #737373; font-weight: 500; font-size: 12px; ">TV
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="mb-2" style="line-height: 15px;">
+                                <span style="color: #737373; font-size: 13px; font-family: sans-serif;">HD
+                                    (720p), Full HD
+                                    (1080p), Ultra HD (4K) and
+                                    HDR availability subject to your
+                                    internet service and device capabilities. Not all content is available in all
+                                    resolutions. See our <span
+                                        style="color: #0071eb; cursor: pointer; font-family: sans-serif;">Terms of
+                                        Use</span> for more
+                                    details. </span>
+                            </div>
+                            <div class="mb-5" style="line-height: 15px;">
+                                <span style="color: #737373; font-size: 13px; font-family: sans-serif;">Only people who
+                                    live with you may use your account. Watch on 4 different devices at the same time
+                                    with Premium, 2 with Standard, and 1 with Basic and Mobile.</span>
+                            </div>
+                        </card>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="submit-btn btn"
+                    style="background-color: #e50914; font-weight: 400; font-size: 24px; color: #fff; width: 440px; min-height: 64px;"
+                    onclick="window.location.href='registration.html';">Next</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid"
+        style="height: 225px; background-color: #f3f3f3;  padding-left: 80px; padding-right: 80px; ">
+
+        <div class="row">
+            <div class="col mt-4" style="color: #737373; ">
+                Questions? Contact us.
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-3 mt-4">
+                <a href="faq.html" class="custom-link">FAQ</a>
+            </div>
+            <div class="col-3 mt-4">
+                <a href="help.html" class="custom-link">Help Center</a>
+            </div>
+            <div class="col-3 mt-4">
+                <a href="terms.html" class="custom-link">Term of Use</a>
+            </div>
+            <div class="col-3 mt-4">
+                <a href="privacy.html" class="custom-link">Privacy</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 mt-4">
+                <a href="cookie.html" class="custom-link">Cookie Preferences</a>
+            </div>
+            <div class="col-3 mt-4">
+                <a href="corporate.html" class="custom-link">Corporate Information</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+
+                <select id="language-select" class="mt-3">
+                    <option value="english">English</option>
+                    <option value="filipino">Filipino</option>
+                </select>
+
+                <div id="translation-output">
+                    <!-- Translation output will be displayed here -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+<script src="plan.js">
+</script>
+
+</html>
